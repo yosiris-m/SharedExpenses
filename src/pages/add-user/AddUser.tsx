@@ -5,16 +5,16 @@ import { createFriend } from "../../services/friends";
 
 type FormElement = React.FormEvent<HTMLFormElement>;
 
-function AddUser({}) {
-  const [label, setLabel] = useState<string>("");
+function AddUser() {
+  const [name, setName] = useState<string>("");
   const history = useHistory();
 
   const handleSubmit = (e: FormElement) => {
     e.preventDefault();
-    console.log(label);
-    createFriend(label);
+    createFriend(name);
     history.push("/home");
   };
+
   return (
     <>
       <header className={styles.header}>
@@ -27,10 +27,10 @@ function AddUser({}) {
         <span>Name</span>
         <input
           className={styles.label}
-          // required
+          required
           type="text"
-          value={label}
-          onChange={(event) => setLabel(event.target.value)}
+          value={name}
+          onChange={(event) => setName(event.target.value)}
         />
         <button type="submit">Add</button>
       </form>
