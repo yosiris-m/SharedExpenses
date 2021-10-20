@@ -1,6 +1,8 @@
 import styles from "./Home.module.scss";
 import { Link } from "react-router-dom";
 import { getFriends } from "../../services/friends";
+import { getExpenses } from "../../services/expenses";
+import ExpenseDetail from "./ExpenseDetail";
 
 function Home() {
   return (
@@ -20,6 +22,11 @@ function Home() {
 
         <section>
           <Link to="/add-expense">Expenses</Link>
+        </section>
+        <section>
+          {getExpenses().map((expense, idx) => (
+            <ExpenseDetail key={idx} expense={expense} />
+          ))}
         </section>
       </main>
     </>

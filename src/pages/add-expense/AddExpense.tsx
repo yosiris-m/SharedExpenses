@@ -33,9 +33,16 @@ function AddExpense() {
       </header>
       <form onSubmit={handleSubmit} className={styles.form}>
         <label> Friend</label>
-        <select onChange={(event) => setFriend(event.target.value)}>
+        <select
+          onChange={(event) => setFriend(event.target.value)}
+          value={friend}
+          required
+        >
+          <option value="">Select a friend</option>
           {getFriends().map((friend, idx) => (
-            <option key={idx}>{friend}</option>
+            <option value={friend} key={idx}>
+              {friend}
+            </option>
           ))}
         </select>
         <label>

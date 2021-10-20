@@ -2,8 +2,13 @@ import React, { useState } from "react";
 import styles from "./AddUser.module.scss";
 import { Link, useHistory } from "react-router-dom";
 import { createFriend } from "../../services/friends";
+import { Expense } from "../../services/expenses";
 
 type FormElement = React.FormEvent<HTMLFormElement>;
+
+type ExpenseName = {
+  expense: Expense;
+};
 
 function AddUser() {
   const [name, setName] = useState<string>("");
@@ -12,6 +17,7 @@ function AddUser() {
   const handleSubmit = (e: FormElement) => {
     e.preventDefault();
     createFriend(name);
+
     history.push("/home");
   };
 
@@ -31,6 +37,7 @@ function AddUser() {
           type="text"
           value={name}
           onChange={(event) => setName(event.target.value)}
+          autoFocus
         />
         <button type="submit">Add</button>
       </form>
