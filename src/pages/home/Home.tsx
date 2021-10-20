@@ -9,12 +9,18 @@ function Home() {
         <div className={styles.title}>Share Expenses</div>
       </header>
       <main>
-        <Link to="/add-user">Add User</Link>
-        <ul>
-          {getFriends().map((name, index) => (
-            <li key={index}>{name}</li>
-          ))}
-        </ul>
+        <section>
+          <Link to="/add-user">Add User</Link>
+          <ul>
+            {getFriends().map((name, index) => (
+              <li key={index}>{name}</li>
+            ))}
+          </ul>
+        </section>
+
+        <section>
+          <Link to="/add-expense">Expenses</Link>
+        </section>
       </main>
     </>
   );
