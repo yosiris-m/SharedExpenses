@@ -1,7 +1,7 @@
 import React from "react";
 import { Expense } from "../../services/expenses";
 import styles from "./ExpenseDetail.module.scss";
-import moment from "moment";
+import Moment from "react-moment";
 
 type ExpenseDetailProps = {
   expense: Expense;
@@ -18,7 +18,7 @@ function ExpenseDetail({ expense }: ExpenseDetailProps) {
         <div> Add expense: {expense.description}</div>
         <div>{expense.amount} €</div>
       </div>
-      <div>Date: {moment(expense.date).format("DD- MM- YYYY ")}</div>
+      <Moment fromNow>{expense.date}</Moment>
     </div>
   );
 }

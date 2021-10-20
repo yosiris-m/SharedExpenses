@@ -30,14 +30,14 @@ const expenses: Expense[] = [
   {
     friend: "Luis",
     amount: 50,
-    date: "2021-10-19T18:46:30.626Z",
+    date: "2021-10-15T18:46:30.626Z",
     description: "Comida",
   },
 
   {
     friend: "Pedro",
     amount: 30,
-    date: "2021-10-19T18:46:30.626Z",
+    date: "2021-10-01T18:46:30.626Z",
     description: "Tren",
   },
 ];

@@ -12,6 +12,7 @@ function Home() {
       </header>
       <main className={styles.wrapperMain}>
         <section>
+          <h2>Friends</h2>
           <Link to="/add-user">Add User</Link>
           <ul>
             {getFriends().map((name, index) => (
@@ -21,7 +22,8 @@ function Home() {
         </section>
 
         <section>
-          <Link to="/add-expense">Expenses</Link>
+          <h2>Expenses</h2>
+          <Link to="/add-expense">Add expense</Link>
         </section>
         <section>
           {getExpenses().map((expense, idx) => (
