@@ -1,3 +1,11 @@
+.wrapperMain {
+  display: flex;
+  flex-direction: column;
+  background-color: #c7c7ce;
+  height: 90vh;
+}
+
+
 .wrapper {
   color:black;
 }
@@ -12,3 +20,4 @@
     font-size: 1.5rem;
   }
 }
+

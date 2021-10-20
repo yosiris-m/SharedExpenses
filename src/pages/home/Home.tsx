@@ -1,7 +1,7 @@
 import styles from "./Home.module.scss";
 import { Link } from "react-router-dom";
 import { getFriends } from "../../services/friends";
-import { getExpenses } from "../../services/expenses";
+import { getExpenses, getExpensesByUser } from "../../services/expenses";
 import ExpenseDetail from "./ExpenseDetail";
 
 function Home() {
@@ -10,7 +10,7 @@ function Home() {
       <header className={styles.header}>
         <div className={styles.title}>Share Expenses</div>
       </header>
-      <main>
+      <main className={styles.wrapperMain}>
         <section>
           <Link to="/add-user">Add User</Link>
           <ul>
@@ -26,6 +26,14 @@ function Home() {
         <section>
           {getExpenses().map((expense, idx) => (
             <ExpenseDetail key={idx} expense={expense} />
+          ))}
+        </section>
+        <section>
+          <h2>Balance</h2>
+          {getExpensesByUser().map((expensesByUser, idx) => (
+            <div key={idx}>
+              {expensesByUser.friend} {expensesByUser.amount}
+            </div>
           ))}
         </section>
       </main>
