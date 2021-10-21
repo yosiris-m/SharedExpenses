@@ -8,7 +8,7 @@ import { getFriends } from "../../services/friends";
 type FormElement = React.FormEvent<HTMLFormElement>;
 
 function AddExpense() {
-  const now = moment().format("YYYY-MM-DD");
+  const now = moment().format("YYYY-MM-DDTHH:mm");
   const history = useHistory();
 
   const [friend, setFriend] = useState<string>("");
@@ -59,7 +59,7 @@ function AddExpense() {
         </label>
         <input
           required
-          type="date"
+          type={"datetime-local"}
           max={now}
           value={date}
           onChange={(event) => setDate(event.target.value)}
