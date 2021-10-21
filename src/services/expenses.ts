@@ -12,11 +12,16 @@ export type ExpenseByUser = {
   friend: string;
 };
 
+export type DateByUser = {
+  date: string;
+};
+
 const expenses: Expense[] = [
   {
     friend: "Pablo",
     amount: 15,
     date: new Date().toISOString(),
+
     description: "Car",
   },
 
@@ -43,7 +48,15 @@ const expenses: Expense[] = [
 ];
 
 export function getExpenses(): Expense[] {
-  return expenses;
+  return expenses.sort((a, b) => {
+    if (a.date > b.date) {
+      return -1;
+    }
+    if (a.date < b.date) {
+      return 1;
+    }
+    return 0;
+  });
 }
 
 export function createExpenses(expense: Expense) {
@@ -73,6 +86,10 @@ export function getExpensesByUser(): ExpenseByUser[] {
   for (let friend of Object.keys(expensesByUserMap)) {
     const expense = expensesByUserMap[friend];
     const diff = expense - expectedExpenseByFriend;
+    if (diff < 0) {
+      console.log(diff / total - 1);
+    }
+
     result.push({ friend, amount: diff });
   }
 
