@@ -1,0 +1,32 @@
+@import "src/styles/core/variables";
+@mixin flex-column() {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin flex-row() {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin usersSubtitle() {
+  @include flex-row;
+  justify-content: space-between;
+  padding: 0 1rem;
+  font-weight: normal;
+  font-size: 0.8rem;
+}
+
+@mixin link() {
+  color: black;
+  cursor: pointer;
+  font-weight: 600;
+
+  &:hover {
+    color: $color-LinkHover;
+  }
+}
