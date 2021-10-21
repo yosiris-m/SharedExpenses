@@ -32,21 +32,26 @@ function AddExpense() {
         <h1>Add Expenses </h1>
       </header>
       <form onSubmit={handleSubmit} className={styles.form}>
-        <label> Friend</label>
-        <select
-          onChange={(event) => setFriend(event.target.value)}
-          value={friend}
-          required
-        >
-          <option value="">Select a friend</option>
-          {getFriends().map((friend, idx) => (
-            <option value={friend} key={idx}>
-              {friend}
-            </option>
-          ))}
-        </select>
+        <section className={styles.select}>
+          Friend
+          <select
+            className={styles.selectOption}
+            onChange={(event) => setFriend(event.target.value)}
+            value={friend}
+            required
+          >
+            <option value="">Select a friend </option>
+            {getFriends().map((friend, idx) => (
+              <option value={friend} key={idx}>
+                {friend}
+              </option>
+            ))}
+          </select>
+        </section>
         <label>
+          <span>Amount </span>
           <input
+            className={styles.amount}
             required
             type="number"
             min="0.01"
@@ -55,9 +60,10 @@ function AddExpense() {
             value={amount}
             onChange={(event) => setAmount(event.target.value)}
           />
-          Amount
+          €
         </label>
         <input
+          className={styles.date}
           required
           type={"datetime-local"}
           max={now}
@@ -65,16 +71,19 @@ function AddExpense() {
           onChange={(event) => setDate(event.target.value)}
         />
 
-        <label>
-          Description
+        <label className={styles.descriptionBox}>
+          <span className={styles.descriptionTitle}>Concept</span>
           <input
+            className={styles.description}
             required
             type="text"
             value={description}
             onChange={(event) => setDescription(event.target.value)}
           />
         </label>
-        <button type="submit">Add</button>
+        <button type="submit" className={styles.button}>
+          Add
+        </button>
       </form>
     </>
   );

@@ -29,17 +29,19 @@ function AddUser() {
         </Link>
         <h1>Add User </h1>
       </header>
-      <form onSubmit={handleSubmit}>
-        <span>Name</span>
+      <form onSubmit={handleSubmit} className={styles.form}>
+        <i className="fas fa-user" />
         <input
-          className={styles.label}
+          className={styles.inputName}
           required
           type="text"
           value={name}
           onChange={(event) => setName(event.target.value)}
           autoFocus
         />
-        <button type="submit">Add</button>
+        <button type="submit" className={styles.button}>
+          Add
+        </button>
       </form>
     </>
   );

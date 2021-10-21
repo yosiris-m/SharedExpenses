@@ -30,3 +30,38 @@
     color: $color-LinkHover;
   }
 }
+
+@mixin headerComponent {
+  background-color: $background-ColorUsers;
+  @include flex-row;
+  justify-content: flex-start;
+  font-family: $font-family;
+  font-size: 0.8rem;
+  color: $color-title;
+
+  & i {
+    font-size: 1.2rem;
+    color: $color-title;
+    padding: 0 2rem;
+  }
+}
+
+@mixin button {
+  width: 8rem;
+  height: 2rem;
+  background-color: $color-gB;
+  border: none;
+  color: $fontColor;
+  margin-top: 3rem;
+  font-size: 1.2rem;
+}
+
+@mixin inputText {
+  width: 15rem;
+  height: 3rem;
+  border: none;
+  border-bottom: 1px solid $color-gB;
+  text-align: center;
+  text-transform: capitalize;
+  font-size: 1.2rem;
+}

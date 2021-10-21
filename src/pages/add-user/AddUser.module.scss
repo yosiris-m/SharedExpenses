@@ -1,8 +1,23 @@
+@import "src/styles/core/variables";
+@import "src/styles/core/mixins";
+
 .header {
-  background-color: #bbbbf8;
-  font-family: sans-serif;
+  @include headerComponent;
 }
 
-.label {
-  //word-spacing: 1vw;
+.form {
+  margin-top: 2.5rem;
+  @include flex-column;
+}
+
+.inputName {
+  @include inputText;
+  margin-top: 2rem;
+}
+
+.button {
+  @include button;
+}
+.button:hover {
+  background-color: $Hover-BgColorUsers;
 }

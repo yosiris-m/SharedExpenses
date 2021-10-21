@@ -1,10 +1,51 @@
+@import "src/styles/core/variables";
+@import "src/styles/core/mixins";
 .header {
-  background-color: rgba(164,97,159,0.88);
+  @include headerComponent;
 }
 
 .form {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  @include flex-column;
+  font-size: 1rem;
+}
+
+.select {
+  @include flex-row;
+  margin: 2rem 0;
+}
+
+.selectOption {
+  margin-left: 2rem;
+  border-color: $color-gB;
+  background-color: white;
+  font-size: 1rem;
+}
+
+.button {
+  @include button;
+}
+
+.amount {
+  border: none;
+  text-align: center;
+  border-bottom: 1px solid $color-gB;
+  height: 1.5rem;
+}
+
+.date {
+  margin-top: 2rem;
+  height: 2rem;
+  border: 2px solid $color-gB;
+}
+.descriptionBox {
+  @include flex-column;
+  margin-top: 0;
+}
+
+.descriptionTitle {
+  margin-top: 2rem;
+}
+.description {
+  @include inputText;
+  width: 10rem;
 }
