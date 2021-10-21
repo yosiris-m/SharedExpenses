@@ -10,15 +10,21 @@ type ExpenseDetailProps = {
 function ExpenseDetail({ expense }: ExpenseDetailProps) {
   return (
     <div className={styles.wrapper}>
+      <div className={styles.BoxExpenseDetail}>
+        <div>{expense.friend}</div>
+        <Moment fromNow>{expense.date}</Moment>{" "}
+      </div>
+
       <div>
-        <i className="fas fa-user-alt" />
-        {expense.friend}
+        <div className={styles.BoxExpenseDetail}>
+          <span>
+            <i className="fas fa-shopping-basket" />
+            {expense.description}
+          </span>
+
+          <div>{expense.amount} €</div>
+        </div>
       </div>
-      <div className={styles.descriptionPay}>
-        <div> Add expense: {expense.description}</div>
-        <div>{expense.amount} €</div>
-      </div>
-      <Moment fromNow>{expense.date}</Moment>
     </div>
   );
 }

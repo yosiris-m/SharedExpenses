@@ -21,7 +21,6 @@ const expenses: Expense[] = [
     friend: "Pablo",
     amount: 15,
     date: new Date().toISOString(),
-
     description: "Car",
   },
 
