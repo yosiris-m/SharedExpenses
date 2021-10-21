@@ -1,12 +1,22 @@
-.wrapper {display: flex;
-  flex-direction:column;
-  border: 1px solid blue;
+@import "src/styles/core/variables";
+@import "src/styles/core/mixins";
+.wrapper {
+  display: flex;
+  flex-direction: column;
   justify-content: space-between;
-
+  border-bottom: 1px solid white;
+  background-color: $background-ColorExpense-D;
+  padding: 0 1.3rem;
+  margin-bottom: 1rem;
 }
 
-.descriptionPay {
-  display: flex;
-  flex-direction: row;
-  
+.BoxExpenseDetail {
+  @include flex-row;
+  justify-content: space-between;
+  line-height: 2rem;
+
+  & i {
+    padding-right: 0.6rem;
+    color: $color-icon;
+  }
 }
