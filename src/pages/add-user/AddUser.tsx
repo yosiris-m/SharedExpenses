@@ -22,7 +22,7 @@ function AddUser() {
   };
 
   return (
-    <>
+    <div className={styles.box}>
       <header className={styles.header}>
         <Link to="/home">
           <i className="fas fa-arrow-left" />
@@ -33,6 +33,7 @@ function AddUser() {
         <i className="fas fa-user" />
         <input
           className={styles.inputName}
+          placeholder="Name"
           required
           type="text"
           value={name}
@@ -43,7 +44,7 @@ function AddUser() {
           Add
         </button>
       </form>
-    </>
+    </div>
   );
 }
 

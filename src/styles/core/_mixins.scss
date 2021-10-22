@@ -18,11 +18,12 @@
   justify-content: space-between;
   padding: 0 1rem;
   font-weight: normal;
+  color: $font-colorM;
   font-size: 0.8rem;
 }
 
 @mixin link() {
-  color: black;
+  color: $font-colorM;
   cursor: pointer;
   font-weight: 600;
 
@@ -37,11 +38,11 @@
   justify-content: flex-start;
   font-family: $font-family;
   font-size: 0.8rem;
-  color: $color-title;
+  color: $color-subTitle;
 
   & i {
     font-size: 1.2rem;
-    color: $color-title;
+    color: $color-subTitle;
     padding: 0 2rem;
   }
 }
@@ -52,16 +53,28 @@
   background-color: $color-gB;
   border: none;
   color: $fontColor;
-  margin-top: 3rem;
   font-size: 1.2rem;
 }
 
 @mixin inputText {
   width: 15rem;
-  height: 3rem;
+  height: 1.5rem;
   border: none;
   border-bottom: 1px solid $color-gB;
-  text-align: center;
   text-transform: capitalize;
-  font-size: 1.2rem;
+  font-size: 1rem;
+}
+
+@mixin borderOutline {
+  outline: none;
+  border: none;
+  border-bottom: 2px solid #32c0cc;
+}
+
+@mixin Outline {
+  outline: none;
+  border: none;
+}
+@mixin FontSize {
+  font-size: 1rem;
 }

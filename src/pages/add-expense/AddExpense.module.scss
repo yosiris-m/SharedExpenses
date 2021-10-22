@@ -1,51 +1,84 @@
 @import "src/styles/core/variables";
 @import "src/styles/core/mixins";
+
+.container {
+  height: 100vh;
+  background-image: url("../../images/images.jpeg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: -270px 350px;
+}
+
 .header {
   @include headerComponent;
 }
 
 .form {
   @include flex-column;
-  font-size: 1rem;
+  @include FontSize;
 }
 
-.select {
-  @include flex-row;
-  margin: 2rem 0;
+.date {
+  margin-top: 1rem;
+  height: 2rem;
+  @include Outline;
 }
 
-.selectOption {
-  margin-left: 2rem;
-  border-color: $color-gB;
-  background-color: white;
-  font-size: 1rem;
+.label {
+  @include flex-column;
+  align-items: flex-start;
+  margin-top: 2rem;
+
+  & > span {
+    color: gray;
+    font-size: 0.8rem;
+    margin-bottom: 0.3rem;
+  }
 }
 
 .button {
   @include button;
+  margin-top: 6rem;
 }
 
+.amountBox {
+  width: 15rem;
+}
 .amount {
-  border: none;
-  text-align: center;
-  border-bottom: 1px solid $color-gB;
+  width: 14rem;
+  @include FontSize;
   height: 1.5rem;
+  @include borderOutline;
+  text-align: right;
 }
 
-.date {
-  margin-top: 2rem;
-  height: 2rem;
-  border: 2px solid $color-gB;
-}
-.descriptionBox {
-  @include flex-column;
-  margin-top: 0;
+.currency {
+  font-size: 1.2rem;
+  color: black;
 }
 
-.descriptionTitle {
-  margin-top: 2rem;
-}
 .description {
   @include inputText;
-  width: 10rem;
+  width: 15rem;
+  @include borderOutline;
+}
+
+.selectUser {
+  @include borderOutline;
+
+  & i {
+    font-size: 1.4rem;
+    margin-right: 1rem;
+  }
+}
+
+.boy {
+  width: 3rem;
+}
+.selectOption {
+  width: 15rem;
+  background-color: white;
+  @include FontSize;
+  @include borderOutline;
+  padding: 0.5rem 0;
 }

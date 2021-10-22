@@ -1,6 +1,14 @@
 @import "src/styles/core/variables";
 @import "src/styles/core/mixins";
 
+.box {
+  height: 100vh;
+  background-image: url("../../images/images.jpeg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: -280px 350px;
+}
+
 .header {
   @include headerComponent;
 }
@@ -12,11 +20,14 @@
 
 .inputName {
   @include inputText;
+  @include borderOutline;
+  text-align: center;
   margin-top: 2rem;
 }
 
 .button {
   @include button;
+  margin-top: 3rem;
 }
 .button:hover {
   background-color: $Hover-BgColorUsers;

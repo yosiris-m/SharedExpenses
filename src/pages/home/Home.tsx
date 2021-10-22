@@ -10,7 +10,7 @@ function Home() {
   return (
     <>
       <header className={styles.header}>
-        <h1 className={styles.title}>Share Expenses</h1>
+        {/*   <h1 className={styles.title}>Share Expenses</h1>*/}
         <img src={photo} className={styles.photo} alt="friends" />
       </header>
       <main className={styles.wrapperMain}>
@@ -43,7 +43,7 @@ function Home() {
             <ExpenseDetail key={idx} expense={expense} />
           ))}
           <section className={styles.balance}>
-            <h2>Balance</h2>
+            <h2 className={styles.balanceTitle}>Balance</h2>
             {getExpensesByUser().map((expensesByUser, idx) => (
               <div key={idx} className={styles.boxBalance}>
                 <div>{expensesByUser.friend} </div>

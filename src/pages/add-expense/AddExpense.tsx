@@ -24,7 +24,7 @@ function AddExpense() {
   };
 
   return (
-    <>
+    <div className={styles.container}>
       <header className={styles.header}>
         <Link to="/home">
           <i className="fas fa-arrow-left" />
@@ -32,36 +32,6 @@ function AddExpense() {
         <h1>Add Expenses </h1>
       </header>
       <form onSubmit={handleSubmit} className={styles.form}>
-        <section className={styles.select}>
-          Friend
-          <select
-            className={styles.selectOption}
-            onChange={(event) => setFriend(event.target.value)}
-            value={friend}
-            required
-          >
-            <option value="">Select a friend </option>
-            {getFriends().map((friend, idx) => (
-              <option value={friend} key={idx}>
-                {friend}
-              </option>
-            ))}
-          </select>
-        </section>
-        <label>
-          <span>Amount </span>
-          <input
-            className={styles.amount}
-            required
-            type="number"
-            min="0.01"
-            step="0.01"
-            placeholder="0.0"
-            value={amount}
-            onChange={(event) => setAmount(event.target.value)}
-          />
-          €
-        </label>
         <input
           className={styles.date}
           required
@@ -70,10 +40,47 @@ function AddExpense() {
           value={date}
           onChange={(event) => setDate(event.target.value)}
         />
+        <label className={styles.label}>
+          <span>User</span>
+          {/*<div className={styles.selectUser}>*/}
+          {/*  <i className="fas fa-user" />*/}
+          <select
+            className={styles.selectOption}
+            onChange={(event) => setFriend(event.target.value)}
+            value={friend}
+            required
+          >
+            <option value="" />
+            {getFriends().map((friend, idx) => (
+              <option value={friend} key={idx}>
+                {friend}
+              </option>
+            ))}
+          </select>
+          {/*</div>*/}
+        </label>
 
-        <label className={styles.descriptionBox}>
-          <span className={styles.descriptionTitle}>Concept</span>
+        <label className={styles.label}>
+          <span>Amount</span>
+          <div className={styles.amountBox}>
+            <input
+              className={styles.amount}
+              required
+              type="number"
+              min="0.01"
+              step="0.01"
+              placeholder="0.0"
+              value={amount}
+              onChange={(event) => setAmount(event.target.value)}
+            />
+            <span className={styles.currency}>€</span>
+          </div>
+        </label>
+
+        <label className={styles.label}>
+          <span>Concept</span>
           <input
+            placeholder="Restaurant"
             className={styles.description}
             required
             type="text"
@@ -85,7 +92,7 @@ function AddExpense() {
           Add
         </button>
       </form>
-    </>
+    </div>
   );
 }
 

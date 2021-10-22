@@ -2,18 +2,18 @@
 @import "src/styles/core/mixins";
 
 .header {
-  font-family: $font-title;
+  /*font-family: $font-title;*/
   text-align: center;
   background-color: $background-ColorBody-g;
 
-  & .title {
+  /* & .title {
     padding-top: 1rem;
     margin-top: 0;
     font-size: 1rem;
-  }
+  }*/
 
   & .photo {
-    width: 17.5rem;
+    width: 17.7rem;
     padding-bottom: 1rem;
   }
 }
@@ -26,11 +26,13 @@
 
   .users {
     font-size: 1.2rem;
+    margin-top: 1.5rem;
     @include usersSubtitle;
   }
 
   .usersLink {
     @include link;
+    color: $font-colorM;
     font-size: 1.1rem;
   }
 
@@ -47,6 +49,7 @@
     border-radius: 10%;
     margin: 0.3rem;
     text-decoration: none;
+    color: $fontColor;
 
     &:hover {
       background-color: $Hover-BgColorUsers;
@@ -68,9 +71,13 @@
 .balance {
   display: flex;
   flex-direction: column;
+  color: $font-colorM;
   padding: 1rem;
 }
 
+.balanceTitle {
+  font-size: 1.2rem;
+}
 .boxBalance {
   @include flex-row;
   justify-content: space-between;
