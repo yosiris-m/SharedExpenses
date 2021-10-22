@@ -1,0 +1,11 @@
+@import "/src/styles/core/_variables.scss";
+/*@import "src/styles/core/mixins";*/
+
+.btn {
+  width: 8rem;
+  height: 2rem;
+  background-color: $color-gB;
+  border: none;
+  color: $fontColor;
+  font-size: 1.2rem;
+}

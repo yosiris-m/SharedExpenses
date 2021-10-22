@@ -7,10 +7,11 @@ import {
 } from "react-router-dom";
 import AddUser from "./pages/add-user/AddUser";
 import AddExpense from "./pages/add-expense/AddExpense";
+import styles from "./App.module.scss";
 
 function App() {
   return (
-    <>
+    <div className={styles.app}>
       <Router>
         <Switch>
           <Route path="/home" component={Home} />
@@ -19,7 +20,7 @@ function App() {
           <Redirect to="/home" />
         </Switch>
       </Router>
-    </>
+    </div>
   );
 }
 

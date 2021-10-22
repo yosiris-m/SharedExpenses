@@ -8,12 +8,15 @@
   background-color: $background-ColorExpense-D;
   padding: 0 1.3rem;
   margin-bottom: 1rem;
+
+  @include responsiveGrid;
 }
 
 .BoxExpenseDetail {
   @include flex-row;
   justify-content: space-between;
   line-height: 2rem;
+  @include responsiveGrid;
 
   & i {
     padding-right: 0.6rem;

@@ -7,6 +7,14 @@
   background-size: contain;
   background-repeat: no-repeat;
   background-position: -270px 350px;
+
+  @media all and (min-width: 768px) {
+    background-position: -60rem 30rem;
+  }
+
+  @media all and (min-width: 1220px) {
+    background-position: -50rem 10rem;
+  }
 }
 
 .header {
@@ -16,12 +24,20 @@
 .form {
   @include flex-column;
   @include FontSize;
+
+  @media all and (min-width: 768px) {
+    margin-top: 2.5rem;
+  }
 }
 
 .date {
   margin-top: 1rem;
   height: 2rem;
   @include Outline;
+
+  @media all and (min-width: 768px) {
+    font-size: 1.1rem;
+  }
 }
 
 .label {
@@ -29,10 +45,18 @@
   align-items: flex-start;
   margin-top: 2rem;
 
+  @media all and (min-width: 768px) {
+    font-size: 1.1rem;
+  }
+
   & > span {
     color: gray;
     font-size: 0.8rem;
     margin-bottom: 0.3rem;
+
+    @media all and (min-width: 768px) {
+      font-size: 1.1rem;
+    }
   }
 }
 
@@ -61,6 +85,10 @@
   @include inputText;
   width: 15rem;
   @include borderOutline;
+
+  @media all and (min-width: 768px) {
+    margin-top: 2rem;
+  }
 }
 
 .selectUser {
@@ -81,4 +109,8 @@
   @include FontSize;
   @include borderOutline;
   padding: 0.5rem 0;
+
+  @media all and (min-width: 768px) {
+    margin-top: 2.5rem;
+  }
 }

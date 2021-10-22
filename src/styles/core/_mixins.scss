@@ -78,3 +78,14 @@
 @mixin FontSize {
   font-size: 1rem;
 }
+
+@mixin responsive {
+  @media all and (min-width: 768px) {
+    max-width: 30rem;
+    margin: 0 auto;
+  }
+}
+
+@mixin responsiveGrid {
+  padding: 0 1.5rem;
+}

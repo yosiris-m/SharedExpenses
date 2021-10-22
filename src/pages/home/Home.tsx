@@ -6,6 +6,10 @@ import ExpenseDetail from "./ExpenseDetail";
 import photo from "../../images/photo.jpg";
 import React from "react";
 
+export type Total = {
+  amount: number;
+};
+
 function Home() {
   return (
     <>
@@ -43,6 +47,9 @@ function Home() {
             <ExpenseDetail key={idx} expense={expense} />
           ))}
           <section className={styles.balance}>
+            {/* {getExpensesTotal().map((total, idx) => (
+              <span key={idx}>{total}</span>
+            ))}*/}
             <h2 className={styles.balanceTitle}>Balance</h2>
             {getExpensesByUser().map((expensesByUser, idx) => (
               <div key={idx} className={styles.boxBalance}>
