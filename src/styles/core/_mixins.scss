@@ -89,3 +89,19 @@
 @mixin responsiveGrid {
   padding: 0 1.5rem;
 }
+
+@mixin blueBallBg {
+  height: 100vh;
+  background-image: url("../../images/blue_bg.jpg");
+  background-repeat: no-repeat;
+  background-position: bottom left;
+  background-size: 30% auto;
+
+  @media all and (min-width: 768px) {
+    background-size: 15% auto;
+  }
+
+  @media all and (min-width: 1220px) {
+    background-size: 10% auto;
+  }
+}

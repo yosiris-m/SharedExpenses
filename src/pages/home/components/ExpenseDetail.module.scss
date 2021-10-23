@@ -1,5 +1,5 @@
-@import "src/styles/core/variables";
-@import "src/styles/core/mixins";
+@import "../../../styles/core/variables";
+@import "../../../styles/core/mixins";
 .wrapper {
   display: flex;
   flex-direction: column;
@@ -24,9 +24,6 @@
   }
 }
 
-.wallet {
-  width: 1.5rem;
-}
 .date {
   font-size: 0.8rem;
   color: $fontColorDate;

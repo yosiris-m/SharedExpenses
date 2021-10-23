@@ -2,19 +2,7 @@
 @import "src/styles/core/mixins";
 
 .container {
-  height: 100vh;
-  background-image: url("../../images/images.jpeg");
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: -270px 350px;
-
-  @media all and (min-width: 768px) {
-    background-position: -60rem 30rem;
-  }
-
-  @media all and (min-width: 1220px) {
-    background-position: -50rem 10rem;
-  }
+  @include blueBallBg;
 }
 
 .header {

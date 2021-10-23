@@ -2,13 +2,8 @@ import React, { useState } from "react";
 import styles from "./AddUser.module.scss";
 import { Link, useHistory } from "react-router-dom";
 import { createFriend } from "../../services/friends";
-import { Expense } from "../../services/expenses";
 
 type FormElement = React.FormEvent<HTMLFormElement>;
-
-type ExpenseName = {
-  expense: Expense;
-};
 
 function AddUser() {
   const [name, setName] = useState<string>("");
@@ -22,7 +17,7 @@ function AddUser() {
   };
 
   return (
-    <div className={styles.box}>
+    <div className={styles.container}>
       <header className={styles.header}>
         <Link to="/home">
           <i className="fas fa-arrow-left" />

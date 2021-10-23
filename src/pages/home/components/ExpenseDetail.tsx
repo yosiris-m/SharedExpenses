@@ -1,8 +1,8 @@
 import React from "react";
-import { Expense } from "../../services/expenses";
+import { Expense } from "../../../services/expenses";
 import styles from "./ExpenseDetail.module.scss";
 import Moment from "react-moment";
-import wallet from "../../images/bag-dynamic-premium.png";
+import { formatMoney } from "../../../helpers/formatters";
 
 type ExpenseDetailProps = {
   expense: Expense;
@@ -21,12 +21,11 @@ function ExpenseDetail({ expense }: ExpenseDetailProps) {
       <div>
         <div className={styles.BoxExpenseDetail}>
           <span>
-            <img src={wallet} alt="money" className={styles.wallet} />
-            {/*      <i className="fas fa-shopping-basket" />*/}
+            <i className="fas fa-shopping-basket" />
             {expense.description}
           </span>
 
-          <div>{expense.amount} €</div>
+          <div>{formatMoney(expense.amount)}</div>
         </div>
       </div>
     </div>

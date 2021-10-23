@@ -7,12 +7,28 @@
   background-color: $background-ColorBody-g;
 
   & .photo {
-    width: 17.7rem;
-    padding-bottom: 1rem;
+    width: 90vw;
 
     @media all and (min-width: 768px) {
       width: 30rem;
     }
+  }
+}
+
+.footer {
+  text-align: center;
+  margin-top: 4rem;
+  padding: 0.7rem 0 0.2rem 0;
+  font-size: 0.8rem;
+  font-family: $font-family;
+  color: white;
+  background-color: $color-icon;
+
+  & .freepik {
+    margin: 0;
+    font-size: 0.4rem;
+    color: white;
+    text-decoration: none;
   }
 }
 
@@ -87,11 +103,14 @@
 
 .balanceTitle {
   font-size: 1.2rem;
-
-  @media all and (min-width: 768px) {
-    padding-left: 1rem;
-  }
 }
+
+.totalExpenses {
+  @include flex-row;
+  justify-content: space-between;
+  padding: 0 2rem;
+}
+
 .boxBalance {
   @include responsiveGrid;
   @include flex-row;
