@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import styles from "./AddUser.module.scss";
 import { Link, useHistory } from "react-router-dom";
 import { createFriend } from "../../services/friends";
+import Button from "../../components/button/Button";
 
 type FormElement = React.FormEvent<HTMLFormElement>;
 
@@ -35,9 +36,7 @@ function AddUser() {
           onChange={(event) => setName(event.target.value)}
           autoFocus
         />
-        <button type="submit" className={styles.button}>
-          Add
-        </button>
+        <Button label="Add" type="submit" />
       </form>
     </div>
   );

@@ -29,11 +29,3 @@
   text-align: center;
   margin-top: 2rem;
 }
-
-.button {
-  @include button;
-  margin-top: 3rem;
-}
-.button:hover {
-  background-color: $Hover-BgColorUsers;
-}

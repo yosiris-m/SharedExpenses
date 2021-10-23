@@ -4,6 +4,7 @@ import { Link, useHistory } from "react-router-dom";
 import { createExpenses } from "../../services/expenses";
 import moment from "moment";
 import { getFriends } from "../../services/friends";
+import Button from "../../components/button/Button";
 
 type FormElement = React.FormEvent<HTMLFormElement>;
 
@@ -42,8 +43,6 @@ function AddExpense() {
         />
         <label className={styles.label}>
           <span>User</span>
-          {/*<div className={styles.selectUser}>*/}
-          {/*  <i className="fas fa-user" />*/}
           <select
             className={styles.selectOption}
             onChange={(event) => setFriend(event.target.value)}
@@ -88,9 +87,7 @@ function AddExpense() {
             onChange={(event) => setDescription(event.target.value)}
           />
         </label>
-        <button type="submit" className={styles.button}>
-          Add
-        </button>
+        <Button label="Add" type="submit" />
       </form>
     </div>
   );

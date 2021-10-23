@@ -1,5 +1,4 @@
-@import "/src/styles/core/_variables.scss";
-/*@import "src/styles/core/mixins";*/
+@import "/src/styles/core/variables";
 
 .btn {
   width: 8rem;
@@ -8,4 +7,9 @@
   border: none;
   color: $fontColor;
   font-size: 1.2rem;
+  margin-top: 3rem;
+
+  &:hover {
+    background-color: $Hover-BgColorUsers;
+  }
 }
