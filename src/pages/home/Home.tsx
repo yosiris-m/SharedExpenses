@@ -11,6 +11,12 @@ export type Total = {
 };
 
 function Home() {
+  function formatMoney(amount: number) {
+    return amount.toLocaleString("es-ES", {
+      style: "currency",
+      currency: "EUR",
+    });
+  }
   return (
     <>
       <header className={styles.header}>
@@ -53,8 +59,8 @@ function Home() {
             <h2 className={styles.balanceTitle}>Balance</h2>
             {getExpensesByUser().map((expensesByUser, idx) => (
               <div key={idx} className={styles.boxBalance}>
-                <div>{expensesByUser.friend} </div>
-                <div> {expensesByUser.amount} €</div>
+                <div>{expensesByUser.friend}</div>
+                <div>{formatMoney(expensesByUser.amount)}</div>
               </div>
             ))}
           </section>
