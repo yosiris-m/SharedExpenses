@@ -12,38 +12,8 @@ export type ExpenseByUser = {
   friend: string;
 };
 
-const expenses: Expense[] = [
-  {
-    friend: "Pablo",
-    amount: 15,
-    date: new Date().toISOString(),
-    description: "Car",
-  },
-
-  {
-    friend: "Pablo",
-    amount: 20,
-    date: "2021-10-19T18:46:30.626Z",
-    description: "Hotel",
-  },
-
-  {
-    friend: "Luis",
-    amount: 50,
-    date: "2021-10-15T18:46:30.626Z",
-    description: "Comida",
-  },
-
-  {
-    friend: "Pedro",
-    amount: 30,
-    date: "2021-10-01T18:46:30.626Z",
-    description: "Tren",
-  },
-];
-
 export function getExpenses(): Expense[] {
-  return expenses.sort((a, b) => {
+  return getExpensesFromLocalStorage().sort((a, b) => {
     if (a.date > b.date) {
       return -1;
     }
@@ -55,12 +25,14 @@ export function getExpenses(): Expense[] {
 }
 
 export function createExpenses(expense: Expense) {
+  const expenses = getExpensesFromLocalStorage();
   expenses.push(expense);
+  saveExpensesInLocalStorage(expenses);
 }
 
 export function getExpensesTotal() {
   let total = 0;
-  for (let expense of expenses) {
+  for (let expense of getExpensesFromLocalStorage()) {
     total += expense.amount;
   }
   return total;
@@ -76,7 +48,7 @@ export function getExpensesByUser(): ExpenseByUser[] {
     expensesByUserMap[friend] = 0;
   }
 
-  for (let expense of expenses) {
+  for (let expense of getExpensesFromLocalStorage()) {
     expensesByUserMap[expense.friend] += expense.amount;
   }
 
@@ -89,4 +61,16 @@ export function getExpensesByUser(): ExpenseByUser[] {
   }
 
   return result;
+}
+
+function getExpensesFromLocalStorage(): Expense[] {
+  const expensesJson = localStorage.getItem("expenses");
+  if (expensesJson === null) {
+    return [];
+  }
+  return JSON.parse(expensesJson);
+}
+
+function saveExpensesInLocalStorage(expenses: Expense[]): void {
+  localStorage.setItem("expenses", JSON.stringify(expenses));
 }
