@@ -1,0 +1,21 @@
+@import "src/styles/core/variables";
+@import "src/styles/core/mixins";
+
+.usersExpense {
+  @include usersSubtitle;
+  padding-top: 2rem;
+
+  @include responsive;
+}
+
+.expenseLink {
+  @include link;
+  padding-left: 3rem;
+  font-size: 1.2rem;
+}
+
+.totalExpenses {
+  @include flex-row;
+  justify-content: space-between;
+  padding: 0 2rem;
+}

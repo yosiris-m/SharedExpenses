@@ -1,0 +1,22 @@
+@import "src/styles/core/variables";
+@import "src/styles/core/mixins";
+
+.balance {
+  display: flex;
+  flex-direction: column;
+  color: $font-colorM;
+  padding: 1rem;
+  @include responsiveGrid;
+}
+
+.balanceTitle {
+  font-size: 1.2rem;
+}
+
+.boxBalance {
+  @include responsiveGrid;
+  @include flex-row;
+  justify-content: space-between;
+  padding: 0.5rem 1rem;
+  border-bottom: 1px solid rgba(111, 173, 175, 0.37);
+}

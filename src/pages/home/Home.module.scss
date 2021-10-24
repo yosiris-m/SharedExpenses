@@ -2,7 +2,6 @@
 @import "src/styles/core/mixins";
 
 .header {
-  /*font-family: $font-title;*/
   text-align: center;
   background-color: $background-ColorBody-g;
 
@@ -15,26 +14,10 @@
   }
 }
 
-.footer {
-  text-align: center;
-  margin-top: 4rem;
-  padding: 0.7rem 0 0.2rem 0;
-  font-size: 0.8rem;
-  font-family: $font-family;
-  color: white;
-  background-color: $color-icon;
-
-  & .freepik {
-    margin: 0;
-    font-size: 0.4rem;
-    color: white;
-    text-decoration: none;
-  }
-}
-
 .usersContainer {
   background-color: $background-Users;
 }
+
 .wrapperMain {
   font-family: $font-title;
 
@@ -78,43 +61,4 @@
 
   .wrapper {
   }
-
-  .usersExpense {
-    @include usersSubtitle;
-    padding-top: 2rem;
-
-    @include responsive;
-  }
-
-  .expenseLink {
-    @include link;
-    padding-left: 3rem;
-    font-size: 1.2rem;
-  }
-}
-
-.balance {
-  display: flex;
-  flex-direction: column;
-  color: $font-colorM;
-  padding: 1rem;
-  @include responsiveGrid;
-}
-
-.balanceTitle {
-  font-size: 1.2rem;
-}
-
-.totalExpenses {
-  @include flex-row;
-  justify-content: space-between;
-  padding: 0 2rem;
-}
-
-.boxBalance {
-  @include responsiveGrid;
-  @include flex-row;
-  justify-content: space-between;
-  padding: 0.5rem 1rem;
-  border-bottom: 1px solid rgba(111, 173, 175, 0.37);
 }

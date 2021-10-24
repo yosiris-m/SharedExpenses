@@ -1,0 +1,19 @@
+@import "src/styles/core/variables";
+@import "src/styles/core/mixins";
+
+.footer {
+  text-align: center;
+  margin-top: 4rem;
+  padding: 0.7rem 0 0.2rem 0;
+  font-size: 0.8rem;
+  font-family: $font-family;
+  color: white;
+  background-color: $color-icon;
+
+  & .freepik {
+    margin: 0;
+    font-size: 0.4rem;
+    color: white;
+    text-decoration: none;
+  }
+}
