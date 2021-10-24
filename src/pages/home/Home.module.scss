@@ -1,12 +1,17 @@
 @import "src/styles/core/variables";
 @import "src/styles/core/mixins";
 
+.wrapper {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
 .header {
   text-align: center;
-  background-color: $background-ColorBody-g;
 
   & .photo {
-    width: 90vw;
+    width: 95vw;
 
     @media all and (min-width: 768px) {
       width: 30rem;
@@ -14,51 +19,6 @@
   }
 }
 
-.usersContainer {
-  background-color: $background-Users;
-}
-
 .wrapperMain {
   font-family: $font-title;
-
-  .users {
-    font-size: 1.2rem;
-    margin-top: 1.5rem;
-    @include usersSubtitle;
-
-    @media all and (min-width: 768px) {
-      max-width: 28rem;
-      margin: 0 auto;
-      padding-top: 3rem;
-    }
-  }
-
-  .usersLink {
-    @include link;
-    color: $font-colorM;
-    font-size: 1.1rem;
-  }
-
-  .usersList {
-    @include flex-row;
-    flex-wrap: wrap;
-  }
-
-  .listName {
-    @include flex-column;
-    background-color: $background-ColorUsers;
-    height: 3rem;
-    min-width: 6rem;
-    border-radius: 10%;
-    margin: 0.3rem;
-    text-decoration: none;
-    color: $fontColor;
-
-    &:hover {
-      background-color: $Hover-BgColorUsers;
-    }
-  }
-
-  .wrapper {
-  }
 }

@@ -1,0 +1,23 @@
+@import "src/styles/core/variables";
+@import "src/styles/core/mixins";
+
+.wrapper {
+  text-align: center;
+  padding: 2rem;
+}
+
+.message {
+  font-size: 1.2rem;
+  margin-top: 5rem;
+  margin-bottom: 4rem;
+}
+
+.addPeopleLink {
+  font-size: 1.5rem;
+  color: white;
+  padding: 1rem;
+  background-color: $color-icon;
+  border-radius: 1rem;
+  text-decoration: none;
+  margin-top: 3rem;
+}

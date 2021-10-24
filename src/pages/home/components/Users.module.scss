@@ -1,0 +1,44 @@
+@import "src/styles/core/variables";
+@import "src/styles/core/mixins";
+
+.usersContainer {
+  background-color: $background-Users;
+}
+
+.users {
+  font-size: 1.2rem;
+  margin-top: 1.5rem;
+  @include usersSubtitle;
+
+  @media all and (min-width: 768px) {
+    max-width: 28rem;
+    margin: 0 auto;
+    padding-top: 3rem;
+  }
+}
+
+.usersLink {
+  @include link;
+  color: $font-colorM;
+  font-size: 1.1rem;
+}
+
+.usersList {
+  @include flex-row;
+  flex-wrap: wrap;
+}
+
+.listName {
+  @include flex-column;
+  background-color: $background-ColorUsers;
+  height: 3rem;
+  min-width: 6rem;
+  border-radius: 10%;
+  margin: 0.3rem;
+  text-decoration: none;
+  color: $fontColor;
+
+  &:hover {
+    background-color: $Hover-BgColorUsers;
+  }
+}
