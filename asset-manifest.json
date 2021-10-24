@@ -1,24 +1,24 @@
 {
   "files": {
-    "main.css": "/SharedExpenses/static/css/main.2b5dd2a0.chunk.css",
-    "main.js": "/SharedExpenses/static/js/main.26f37aaa.chunk.js",
-    "main.js.map": "/SharedExpenses/static/js/main.26f37aaa.chunk.js.map",
-    "runtime-main.js": "/SharedExpenses/static/js/runtime-main.9ec08667.js",
-    "runtime-main.js.map": "/SharedExpenses/static/js/runtime-main.9ec08667.js.map",
-    "static/js/2.c5222a41.chunk.js": "/SharedExpenses/static/js/2.c5222a41.chunk.js",
-    "static/js/2.c5222a41.chunk.js.map": "/SharedExpenses/static/js/2.c5222a41.chunk.js.map",
-    "static/js/3.3c83b78e.chunk.js": "/SharedExpenses/static/js/3.3c83b78e.chunk.js",
-    "static/js/3.3c83b78e.chunk.js.map": "/SharedExpenses/static/js/3.3c83b78e.chunk.js.map",
+    "main.css": "/SharedExpenses/static/css/main.a3c8a127.chunk.css",
+    "main.js": "/SharedExpenses/static/js/main.a33bbda2.chunk.js",
+    "main.js.map": "/SharedExpenses/static/js/main.a33bbda2.chunk.js.map",
+    "runtime-main.js": "/SharedExpenses/static/js/runtime-main.b7408425.js",
+    "runtime-main.js.map": "/SharedExpenses/static/js/runtime-main.b7408425.js.map",
+    "static/js/2.c594e9e8.chunk.js": "/SharedExpenses/static/js/2.c594e9e8.chunk.js",
+    "static/js/2.c594e9e8.chunk.js.map": "/SharedExpenses/static/js/2.c594e9e8.chunk.js.map",
+    "static/js/3.d225b22b.chunk.js": "/SharedExpenses/static/js/3.d225b22b.chunk.js",
+    "static/js/3.d225b22b.chunk.js.map": "/SharedExpenses/static/js/3.d225b22b.chunk.js.map",
     "index.html": "/SharedExpenses/index.html",
-    "static/css/main.2b5dd2a0.chunk.css.map": "/SharedExpenses/static/css/main.2b5dd2a0.chunk.css.map",
-    "static/js/2.c5222a41.chunk.js.LICENSE.txt": "/SharedExpenses/static/js/2.c5222a41.chunk.js.LICENSE.txt",
+    "static/css/main.a3c8a127.chunk.css.map": "/SharedExpenses/static/css/main.a3c8a127.chunk.css.map",
+    "static/js/2.c594e9e8.chunk.js.LICENSE.txt": "/SharedExpenses/static/js/2.c594e9e8.chunk.js.LICENSE.txt",
     "static/media/AddUser.module.scss": "/SharedExpenses/static/media/blue_bg.49e543c4.jpg",
     "static/media/friends.8fd0a22b.jpg": "/SharedExpenses/static/media/friends.8fd0a22b.jpg"
   },
   "entrypoints": [
-    "static/js/runtime-main.9ec08667.js",
-    "static/js/2.c5222a41.chunk.js",
-    "static/css/main.2b5dd2a0.chunk.css",
-    "static/js/main.26f37aaa.chunk.js"
+    "static/js/runtime-main.b7408425.js",
+    "static/js/2.c594e9e8.chunk.js",
+    "static/css/main.a3c8a127.chunk.css",
+    "static/js/main.a33bbda2.chunk.js"
   ]
 }
