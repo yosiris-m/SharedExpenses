@@ -7,9 +7,9 @@ import ExpenseDetail from "./ExpenseDetail";
 
 function Expenses() {
   return (
-    <section>
-      <div className={styles.usersExpense}>
-        <h2>Expenses</h2>
+    <section className={styles.wrapper}>
+      <div className={styles.header}>
+        <h2 className={styles.title}>Expenses</h2>
         <Link to="/add-expense" className={styles.expenseLink}>
           Add expense
         </Link>

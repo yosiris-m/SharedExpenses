@@ -1,22 +1,17 @@
 @import "src/styles/core/variables";
 @import "src/styles/core/mixins";
 
-.balance {
-  display: flex;
-  flex-direction: column;
-  color: $font-colorM;
-  padding: 1rem;
-  @include responsiveGrid;
+.wrapper {
+  @include sectionWrapper;
 }
 
-.balanceTitle {
-  font-size: 1.2rem;
+.title {
+  @include sectionTitle;
 }
 
-.boxBalance {
-  @include responsiveGrid;
+.list {
   @include flex-row;
   justify-content: space-between;
-  padding: 0.5rem 1rem;
+  padding: 0.5rem 0;
   border-bottom: 1px solid rgba(111, 173, 175, 0.37);
 }

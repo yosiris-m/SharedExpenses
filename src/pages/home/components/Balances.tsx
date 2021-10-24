@@ -5,11 +5,11 @@ import { formatMoney } from "../../../helpers/formatters";
 
 function Balances() {
   return (
-    <section className={styles.balance}>
-      <h2 className={styles.balanceTitle}>Balance</h2>
+    <section className={styles.wrapper}>
+      <h2 className={styles.title}>Balances</h2>
 
       {getExpensesByUser().map((expensesByUser, idx) => (
-        <div key={idx} className={styles.boxBalance}>
+        <div key={idx} className={styles.list}>
           <div>{expensesByUser.friend}</div>
           <div>{formatMoney(expensesByUser.amount)}</div>
         </div>

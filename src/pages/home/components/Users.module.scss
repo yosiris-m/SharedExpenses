@@ -1,29 +1,24 @@
 @import "src/styles/core/variables";
 @import "src/styles/core/mixins";
 
-.usersContainer {
-  background-color: $background-Users;
+.wrapper {
+  @include sectionWrapper;
 }
 
-.users {
-  font-size: 1.2rem;
-  margin-top: 1.5rem;
-  @include usersSubtitle;
-
-  @media all and (min-width: 768px) {
-    max-width: 28rem;
-    margin: 0 auto;
-    padding-top: 3rem;
-  }
+.header {
+  @include sectionHeader;
 }
 
-.usersLink {
+.title {
+  @include sectionTitle;
+}
+
+.addUsersLink {
   @include link;
   color: $font-colorM;
-  font-size: 1.1rem;
 }
 
-.usersList {
+.list {
   @include flex-row;
   flex-wrap: wrap;
 }

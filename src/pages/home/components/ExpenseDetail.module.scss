@@ -1,22 +1,19 @@
 @import "../../../styles/core/variables";
 @import "../../../styles/core/mixins";
+
 .wrapper {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  border-bottom: 1px solid $fontColor;
-  background-color: $background-ColorExpense-D;
-  padding: 0 1.3rem;
+  border-bottom: 1px solid rgba(190, 188, 188, 0.2);
+  /*  background-color: $background-ColorExpense-D;*/
   margin-bottom: 1rem;
-
-  @include responsiveGrid;
 }
 
-.BoxExpenseDetail {
+.row {
   @include flex-row;
   justify-content: space-between;
   line-height: 2rem;
-  @include responsiveGrid;
 
   & i {
     padding-right: 0.6rem;

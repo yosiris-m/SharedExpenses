@@ -56,7 +56,6 @@ function AddExpense() {
               </option>
             ))}
           </select>
-          {/*</div>*/}
         </label>
 
         <label className={styles.label}>

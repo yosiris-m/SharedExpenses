@@ -11,22 +11,20 @@ type ExpenseDetailProps = {
 function ExpenseDetail({ expense }: ExpenseDetailProps) {
   return (
     <div className={styles.wrapper}>
-      <div className={styles.BoxExpenseDetail}>
+      <div className={styles.row}>
         <div>{expense.friend}</div>
         <Moment fromNow className={styles.date}>
           {expense.date}
         </Moment>
       </div>
 
-      <div>
-        <div className={styles.BoxExpenseDetail}>
-          <span>
-            <i className="fas fa-shopping-basket" />
-            {expense.description}
-          </span>
+      <div className={styles.row}>
+        <span>
+          <i className="fas fa-receipt" />
+          {expense.description}
+        </span>
 
-          <div>{formatMoney(expense.amount)}</div>
-        </div>
+        <div>{formatMoney(expense.amount)}</div>
       </div>
     </div>
   );

@@ -32,6 +32,7 @@
   @include flex-column;
   align-items: flex-start;
   margin-top: 2rem;
+  font-family: $font-family;
 
   @media all and (min-width: 768px) {
     font-size: 1.1rem;
@@ -41,18 +42,16 @@
     color: gray;
     font-size: 0.8rem;
     margin-bottom: 0.3rem;
-
-    @media all and (min-width: 768px) {
-      font-size: 1.1rem;
-    }
   }
 }
 
 .amountBox {
   width: 15rem;
 }
+
 .amount {
-  width: 14rem;
+  width: 13.1rem;
+  padding-right: 0.8rem;
   @include FontSize;
   height: 1.5rem;
   @include borderOutline;
@@ -70,30 +69,14 @@
   @include borderOutline;
 
   @media all and (min-width: 768px) {
-    margin-top: 2rem;
+    margin-top: 1rem;
   }
 }
 
-.selectUser {
-  @include borderOutline;
-
-  & i {
-    font-size: 1.4rem;
-    margin-right: 1rem;
-  }
-}
-
-.boy {
-  width: 3rem;
-}
 .selectOption {
   width: 15rem;
   background-color: white;
   @include FontSize;
   @include borderOutline;
   padding: 0.5rem 0;
-
-  @media all and (min-width: 768px) {
-    margin-top: 2.5rem;
-  }
 }

@@ -5,14 +5,14 @@ import { getFriends } from "../../../services/friends";
 
 function Users() {
   return (
-    <section className={styles.usersContainer}>
-      <div className={styles.users}>
-        <h2>Users</h2>
-        <Link to="/add-user" className={styles.usersLink}>
+    <section className={styles.wrapper}>
+      <div className={styles.header}>
+        <h2 className={styles.title}>Users</h2>
+        <Link to="/add-user" className={styles.addUsersLink}>
           Add User
         </Link>
       </div>
-      <div className={styles.usersList}>
+      <div className={styles.list}>
         {getFriends().map((name, index) => (
           <div key={index}>
             <Link to="/add-expense" className={styles.listName}>

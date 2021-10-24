@@ -21,4 +21,15 @@
 
 .wrapperMain {
   font-family: $font-title;
+  padding: 0 1.5rem;
+
+  @media all and (min-width: 768px) {
+    max-width: 40rem;
+    margin: 0 auto;
+  }
+
+  @media all and (min-width: 1220px) {
+    max-width: 50rem;
+    margin: 0 auto;
+  }
 }

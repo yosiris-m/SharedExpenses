@@ -13,19 +13,29 @@
   align-items: center;
 }
 
-@mixin usersSubtitle() {
+@mixin sectionHeader() {
   @include flex-row;
   justify-content: space-between;
-  padding: 0 1rem;
   font-weight: normal;
-  color: $font-colorM;
   font-size: 0.8rem;
+}
+
+@mixin sectionWrapper() {
+  margin-top: 1.3rem;
+  margin-bottom: 1rem;
+}
+
+@mixin sectionTitle() {
+  font-size: 1.3rem;
+  padding: 1rem 0;
+  color: black;
 }
 
 @mixin link() {
   color: $font-colorM;
   cursor: pointer;
   font-weight: 600;
+  font-size: 1rem;
 
   &:hover {
     color: $color-LinkHover;
@@ -33,11 +43,13 @@
 }
 
 @mixin headerComponent {
+  height: 3rem;
   background-color: $background-ColorUsers;
   @include flex-row;
   justify-content: flex-start;
   font-family: $font-family;
-  font-size: 0.8rem;
+  font-size: 1.4rem;
+  font-weight: bold;
   color: $color-subTitle;
 
   & i {
@@ -68,17 +80,6 @@
 }
 @mixin FontSize {
   font-size: 1rem;
-}
-
-@mixin responsive {
-  @media all and (min-width: 768px) {
-    max-width: 30rem;
-    margin: 0 auto;
-  }
-}
-
-@mixin responsiveGrid {
-  padding: 0 1.5rem;
 }
 
 @mixin blueBallBg {
