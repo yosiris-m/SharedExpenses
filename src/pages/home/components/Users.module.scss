@@ -15,7 +15,7 @@
 
 .addUsersLink {
   @include link;
-  color: $font-colorM;
+  color: $font-color-m;
 }
 
 .list {
@@ -25,7 +25,7 @@
 
 .listName {
   @include flex-column;
-  background-color: $background-ColorUsers;
+  background-color: $background-colorUsers;
   height: 3rem;
   min-width: 6rem;
   border-radius: 10%;

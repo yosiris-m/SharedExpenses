@@ -11,7 +11,7 @@
 
 .form {
   @include flex-column;
-  @include FontSize;
+  @include fontSize;
 
   @media all and (min-width: 768px) {
     margin-top: 2.5rem;
@@ -24,7 +24,7 @@
   @include Outline;
 
   @media all and (min-width: 768px) {
-    font-size: 1.1rem;
+    font-size: 0.9rem;
   }
 }
 
@@ -50,11 +50,11 @@
 }
 
 .amount {
+  @include fontSize;
+  @include borderOutline;
   width: 13.1rem;
   padding-right: 0.8rem;
-  @include FontSize;
   height: 1.5rem;
-  @include borderOutline;
   text-align: right;
 }
 
@@ -65,8 +65,9 @@
 
 .description {
   @include inputText;
-  width: 15rem;
   @include borderOutline;
+  width: 15rem;
+  font-size: 0.9rem;
 
   @media all and (min-width: 768px) {
     margin-top: 1rem;
@@ -74,9 +75,9 @@
 }
 
 .selectOption {
+  @include fontSize;
+  @include borderOutline;
   width: 15rem;
   background-color: white;
-  @include FontSize;
-  @include borderOutline;
   padding: 0.5rem 0;
 }

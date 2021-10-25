@@ -21,7 +21,7 @@ function ExpenseDetail({ expense }: ExpenseDetailProps) {
       <div className={styles.row}>
         <span>
           <i className="fas fa-receipt" />
-          {expense.description}
+          <span className={styles.description}> {expense.description} </span>
         </span>
 
         <div>{formatMoney(expense.amount)}</div>
