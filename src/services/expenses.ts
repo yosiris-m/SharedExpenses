@@ -53,7 +53,7 @@ export function getExpensesByUser(): ExpenseByUser[] {
   }
 
   const result: ExpenseByUser[] = [];
-  for (let friend of Object.keys(expensesByUserMap)) {
+  for (let friend of friends) {
     const expense = expensesByUserMap[friend];
     const diff = expense - expectedExpenseByFriend;
 
