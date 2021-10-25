@@ -14,13 +14,13 @@ function AddUser() {
     e.preventDefault();
     createFriend(name);
 
-    history.push("/home");
+    history.push("/");
   };
 
   return (
     <div className={styles.container}>
       <header className={styles.header}>
-        <Link to="/home">
+        <Link to="/">
           <i className="fas fa-arrow-left" />
         </Link>
         <h1>Add User </h1>

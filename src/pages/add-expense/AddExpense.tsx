@@ -21,13 +21,13 @@ function AddExpense() {
     e.preventDefault();
     const expense = { friend, amount: parseFloat(amount), date, description };
     createExpenses(expense);
-    history.push("/home");
+    history.push("/");
   };
 
   return (
     <div className={styles.container}>
       <header className={styles.header}>
-        <Link to="/home">
+        <Link to="/">
           <i className="fas fa-arrow-left" />
         </Link>
         <h1>Add Expenses </h1>
