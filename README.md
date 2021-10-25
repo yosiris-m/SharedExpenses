@@ -24,6 +24,7 @@ In this repository you will find the source code as a front-end challenge.
 - [NodeJS](https://nodejs.org)
 - [TypeScript](https://create-react-app.dev/docs/adding-typescript)
 - [React](https://create-react-app.dev)
+- [Jest](https://create-react-app.dev/docs/running-tests)
 - [React Router](https://reactrouter.com)
 - [moment](https://momentjs.com)
 - [react-moment](https://github.com/headzoo/react-moment)
@@ -48,6 +49,11 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
 The page will reload if you make edits.\
 You will also see any lint errors in the console.
+
+### `npm test`
+
+Launches the test runner in the interactive watch mode.\
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
 ### `npm run build`
 
