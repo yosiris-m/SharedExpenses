@@ -2,7 +2,7 @@
 
 In this repository you will find the source code as a front-end challenge.
 
-🌎 **Website**: https://github.com/yosiris-m/SharedExpenses
+🌎 **Website**: https://yosiris-m.github.io/SharedExpenses
 
 ![Screenshot](img/screenshot.png)
 
